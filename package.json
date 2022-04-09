@@ -1,0 +1,23 @@
+{
+  "name": "data-generator",
+  "version": "1.0.0",
+  "description": "Data Generator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karolis161/Data-Generator.git"
+  },
+  "author": "Karolis Urbaitis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karolis161/Data-Generator/issues"
+  },
+  "homepage": "https://github.com/Karolis161/Data-Generator#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

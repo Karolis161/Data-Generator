@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<link rel="stylesheet" href="app.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<body>
+    <h1>Random Credit Card Generator</h1>
+    <p>Press the button to generate a random credit card</p>
+
+    <form action="/generateCard/generateCard" method="post">
+        <button type="submit" class="btn btn-primary btn-block">Generate Credit Card</button>
+    </form>
+
+    <form action="/generateCard/deleteCard" method="post">
+        <button type="submit" class="btn btn-primary btn-block">Delete all values</button>
+    </form>
+
+    <form action="/goBack" method="get">
+        <button type="submit" class="btn btn-primary btn-block">Go back</button>
+    </form>
+
+    <% cardData.forEach(function(card) { %>
+        <table cellpadding="5">
+            <tr>
+                <th>Mastercard: </th>
+                <td>
+                    <%= card.mastercard %>
+                </td>
+            </tr>
+            <tr>
+                <th>Visa: </th>
+                <td>
+                    <%= card.visa %>
+                </td>
+            </tr>
+            <tr>
+                <th>Date: </th>
+                <td>
+                    <%= card.month %> / <%= card.year %>
+                </td>
+            </tr>
+            <tr>
+                <th>CVV: </th>
+                <td>
+                    <%= card.cvv %>
+                </td>
+            </tr>
+            <tr>
+                <th>Short: </th>
+                <td>
+                    <%= card.mastercard %>|<%= card.month %>|<%= card.year %>|<%= card.cvv %>
+                </td>
+            </tr>
+        </table>
+        <% }) %>
+</body>
+
+<style>
+    h1 {
+        color: #003366;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        font-size: 300%;
+        text-align: center;
+    }
+
+    p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 125%;
+        text-align: center;
+    }
+
+    body {
+        background-color: powderblue;
+        text-align: center;
+    }
+
+    table {
+        text-align: justify;
+        float: left;
+        padding: 10px;
+        margin-top: 17px;
+        font-family: Verdana, sans-serif;
+        font-size: 15px;
+    }
+
+    button {
+        margin: 0 auto;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+</style>
+
+</html>
